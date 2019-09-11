@@ -40,6 +40,6 @@ Press: CTRL + B release and Press D
 ```
 
 ### you can adjust the following:
-* base ammount to send (0.1 as default)
+* ammount to send (0.00"$rand" as default)
 * working directory (. cwd as default)
 * desired time frame (10 seg as default)
