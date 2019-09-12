@@ -17,8 +17,8 @@ nodes_online_count=$(echo "${pga_out}" |  grep -c .*,$shardid,true);
 recipient=$(echo "${pga_out}" | grep -v $wallet | shuf -n 1 | awk -F , '{print$1}');
 
 # Run wallet transfers
-#./wallet.sh -t transfer --from $wallet --to $recipient --amount $amount --shardID $shardid --toShardID $(( RANDOM % 4 )) --pass pass:
-./wallet.sh -t transfer --from $wallet --to $recipient --amount $amount --shardID $shardid --toShardID $shardid --pass pass:
+./wallet.sh -t transfer --from $wallet --to $recipient --amount $amount --shardID $shardid --toShardID $(( RANDOM % 4 )) --pass pass:
+#./wallet.sh -t transfer --from $wallet --to $recipient --amount $amount --shardID $shardid --toShardID $shardid --pass pass:
 wait
 
 done
